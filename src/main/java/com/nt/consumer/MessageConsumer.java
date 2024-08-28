@@ -15,6 +15,7 @@ public class MessageConsumer {
 	@KafkaListener(topics = "${app.topic.name}", groupId = "grp1")
 	public void readMessage(String message) {
         //add the recieved message to message store
+		System.out.println(message);
 		store.addMessage(message);
 	}
 }

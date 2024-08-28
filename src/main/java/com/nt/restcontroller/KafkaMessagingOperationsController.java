@@ -33,7 +33,7 @@ public class KafkaMessagingOperationsController {
 	@GetMapping("/readAll")
 	public ResponseEntity<List<String>> showAllMessages() {
 		List<String> messagesList = store.showAllMessages();
-		return new ResponseEntity<List<String>>(messagesList, HttpStatus.OK);
+		return new ResponseEntity<>(messagesList, HttpStatus.OK);
 
 	}
 
